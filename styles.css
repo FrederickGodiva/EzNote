@@ -5,17 +5,17 @@ body {
   background-color: #8525ff; /* Ganti dengan kode warna yang diinginkan */
 }
 
-h1 {
+.heading {
   font-weight: 700;
   color: white;
 }
 
-p {
+.description {
   font-size: 20px;
   color: #bbbbbb;
 }
 
-#pembungkus {
+.content {
   margin: 20px;
   display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@ p {
   margin: auto;
 }
 
-#content-kiri {
+.left-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,13 +33,13 @@ p {
   margin-right: 80px;
 }
 
-#content-kanan {
+.right-content {
   display: flex;
   flex-direction: column;
   width: fit-content;
 }
 
-#judul-website {
+.web-title {
   font-weight: 900;
   font-size: 50px;
   margin: auto;
