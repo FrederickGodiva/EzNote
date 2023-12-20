@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home</title>
+    <title>Setting</title>
     <link rel="icon" href="../assets/img/logo.png" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous" />
-    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/account.css" />
   </head>
 
   <body>
     <nav class="p-3" style="width: 280px; height: 100vh">
       <div class="header">
         <a
-          href="./home.html"
+          href="/"
           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
           <img src="../assets/img/logo.png" alt="logo" width="50" />
           <h1 class="header-text">EzNote</h1>
@@ -27,36 +27,19 @@
       <ul class="nav nav-pills flex-column mb-auto sidebar">
         <li class="nav-item">
           <img src="../assets/icon/home.png" alt="Home" width="25" />
-          <a href="./home.html" class="nav-link nav-option"> Home </a>
+          <a href="#" class="nav-link nav-option" aria-current="page"> Home </a>
         </li>
         <li class="nav-item">
           <img src="../assets/icon/notes.png" alt="Notes" width="25" />
-          <a href="./notes.html" class="nav-link nav-option"> Notes </a>
+          <a href="#" class="nav-link nav-option"> Notes </a>
         </li>
         <li class="nav-item">
           <img src="../assets/icon/picture.png" alt="Picture" width="25" />
-          <a href="./pictures.html" class="nav-link nav-option"> Pictures </a>
+          <a href="#" class="nav-link nav-option"> Pictures </a>
         </li>
         <li class="nav-item">
-          <div
-            class="dropdown d-flex justify-content-center align-items-center">
-            <img src="../assets/icon/settings.png" alt="Settings" width="25" />
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item">
-                <a href="./about-us.html">About Us</a>
-              </li>
-              <li class="dropdown-item">
-                <a href="./account.html">Account</a>
-              </li>
-            </ul>
-          </div>
+          <img src="../assets/icon/settings.png" alt="Settings" width="25" />
+          <a href="#" class="nav-link nav-option"> Settings </a>
         </li>
       </ul>
     </nav>
@@ -67,7 +50,7 @@
         <div class="clock"></div>
       </div>
 
-      <div class="profile d-flex justify-content-end align-items-center">
+      <div class="profile">
         <img
           src="../assets/icon/notif.png"
           alt="Notifications"
@@ -91,42 +74,29 @@
     </header>
 
     <main>
-      <div class="information">
-        <img src="../assets/img/azi.png" alt="Profile Picture" width="150" />
-        <button class="tambah">
-          <img src="../assets/icon/add.png" alt="" width="15" height="15" />
-        </button>
-
-        <div class="vertical-line"></div>
-
-        <div class="notes">
-          <p class="text-secondary">Note</p>
-          <h4>4</h4>
+      <div class="account-settings">
+        <div class="photo-column">
+          <h4>profile picture</h4>
+          <img
+            class="alaign-center"
+            src="../assets/img/azi.png"
+            alt="Profile Picture"
+            width="150" />
         </div>
 
-        <div class="files">
-          <p class="text-secondary">Files</p>
-          <h4>2</h4>
-        </div>
+        <div class="info-column">
+          <h4>account information</h4>
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="" />
 
-        <div class="pictures">
-          <p class="text-secondary">Picture</p>
-          <h4>3</h4>
-        </div>
-      </div>
+          <label for="username">Username:</label>
+          <input type="text" id="username" placeholder="" />
 
-      <div class="welcome-txt">
-        <h1 class="mb-3">Selamat Datang di EzNote</h1>
-        <p class="paragraph">
-          Buatlah catatan anda lebih mudah menggunakan EzNote. Rasakan beberapa
-          fitur yang kami sediakan
-        </p>
-        <p class="paragraph">1. Mencatat seperti biasa</p>
-        <p class="paragraph">2. Dapat membuat file</p>
-        <p class="paragraph">3. Dapat mengupload gambar dengan mudah</p>
-        <p class="paragraph">
-          4. Interface yang simple dan penggunaan web yang mudah
-        </p>
+          <label for="password">Password:</label>
+          <input type="password" id="password" placeholder="" />
+
+          <button type="submit">Submit</button>
+        </div>
       </div>
     </main>
 

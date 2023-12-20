@@ -63,8 +63,17 @@ header {
 
   display: flex;
   align-items: center;
+}
 
-  z-index: 1;
+.profile {
+  margin-left: 70vw;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.dropdown-toggle {
+  background-color: #8525ff;
 }
 
 main {
@@ -79,76 +88,49 @@ main {
   background-color: #ddd;
 
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  gap: 50px;
+  align-items: flex-start;
 }
 
-.profile {
-  margin-left: 70vw;
+/* .account-settings {
   display: flex;
-  gap: 12px;
-  justify-content: center;
-}
-
-.dropdown-toggle {
-  background-color: #8525ff;
-}
-
-.information {
-  background-color: #fff;
-
+  justify-content: start;
   padding: 10px;
-  left: 0;
-  width: 65%;
-  height: 200px;
-  margin-top: 30px;
-  transform: translate(-15%, 0);
+  transform: translate(-10%, 0);
+  gap: 10px;
+} */
 
-  display: flex;
+.info-column {
+  width: 100%;
+}
+
+.photo-column {
   justify-content: center;
-  align-items: center;
-  gap: 120px;
-  text-align: center;
-  border-radius: 5px;
 }
 
-.welcome-txt {
+.photo-column,
+.info-column {
+  width: 20%;
   background-color: #fff;
-  width: 65%;
-  height: auto;
-  transform: translate(-15%, 0);
-  text-align: center;
+  padding: 10px;
+  height: 95%;
   border-radius: 5px;
-  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.welcome-txt h1 {
-  font-weight: 800;
+.info-column {
+  order: 50px; /* Menggeser kolom informasi ke posisi kedua (kanan) */
 }
 
-.welcome-txt p {
-  text-align: start;
-  transform: translate(5%, 0);
+h4 {
+  color: #9e9999;
 }
 
-.tambah {
-  position: absolute;
-  bottom: 10%;
-  left: 18%;
-  transform: translateX(-50%);
-  padding: 1px 4px;
-  background-color: #8525ff;
-  color: white;
+input {
   border: none;
-  cursor: pointer;
 }
-
-.vertical-line {
-  width: 2px;
-  height: 25vh;
-  background-color: #ddd;
-
-  gap: 5px;
+button {
+  margin: 10px 0;
+  background-color: #8525ff;
+  border-radius: 5px;
 }

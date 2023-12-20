@@ -5,7 +5,6 @@ body {
   padding: 0;
   font-family: "Signika", sans-serif;
   background-color: #fff;
-  overflow: hidden;
 }
 
 nav {
@@ -63,8 +62,17 @@ header {
 
   display: flex;
   align-items: center;
+}
 
-  z-index: 1;
+.profile {
+  margin-left: 70vw;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.dropdown-toggle {
+  background-color: #8525ff;
 }
 
 main {
@@ -79,65 +87,57 @@ main {
   background-color: #ddd;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
-  gap: 50px;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.profile {
-  margin-left: 70vw;
+.notes {
+  position: relative;
+  left: 7%;
+
   display: flex;
-  gap: 12px;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.dropdown-toggle {
-  background-color: #8525ff;
-}
-
-.information {
-  background-color: #fff;
+.note {
+  background-color: #f0f0f0;
 
   padding: 10px;
-  left: 0;
-  width: 65%;
-  height: 200px;
+  width: auto;
+  height: auto;
   margin-top: 30px;
   transform: translate(-15%, 0);
 
+  border: 1px solid #ccc;
+  border-radius: 11px;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 120px;
-  text-align: center;
-  border-radius: 5px;
+  flex-direction: column;
 }
 
-.welcome-txt {
-  background-color: #fff;
-  width: 65%;
-  height: auto;
-  transform: translate(-15%, 0);
-  text-align: center;
-  border-radius: 5px;
-  padding: 20px;
+textarea {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 10px;
+  left: 0;
+  width: 785px;
+  height: 350px;
 }
 
-.welcome-txt h1 {
-  font-weight: 800;
-}
-
-.welcome-txt p {
+h2 {
+  color: #ddd;
   text-align: start;
-  transform: translate(5%, 0);
 }
 
-.tambah {
+.add {
   position: absolute;
-  bottom: 10%;
-  left: 18%;
-  transform: translateX(-50%);
+  bottom: 18%; /* Mengatur jarak dari bawah */
+  left: 78%; /* Pusatkan tombol secara horizontal */
+  transform: translateX(-50%); /* Pusatkan tombol secara horizontal */
   padding: 1px 4px;
   background-color: #8525ff;
   color: white;
@@ -145,10 +145,16 @@ main {
   cursor: pointer;
 }
 
-.vertical-line {
-  width: 2px;
-  height: 25vh;
-  background-color: #ddd;
+.title-area,
+.note-area {
+  resize: none;
+  width: 35vw;
+}
 
-  gap: 5px;
+.title-area {
+  height: 50px;
+}
+
+.note-area {
+  height: 80px;
 }
