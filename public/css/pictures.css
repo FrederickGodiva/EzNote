@@ -5,12 +5,13 @@ body {
   padding: 0;
   font-family: "Signika", sans-serif;
   background-color: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 nav {
   position: fixed;
-  width: 349px;
+  width: 280px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -54,23 +55,22 @@ nav {
 }
 
 header {
-  position: fixed;
+  position: relative;
   width: 100vw;
+  height: 85px;
   padding: 10px;
-  height: 9vh;
-  left: 15%;
+  left: 280px;
   box-shadow: 10px 1px 11px rgba(0, 0, 0, 0.2);
 
   display: flex;
   align-items: center;
-  z-index: 1;
 }
 
 .profile {
   margin-left: 70vw;
   display: flex;
-  gap: 12px;
   justify-content: center;
+  gap: 12px;
 }
 
 .dropdown-toggle {
@@ -78,60 +78,47 @@ header {
 }
 
 main {
-  position: fixed;
-  top: 9vh;
-  left: 15%;
-
-  width: 100vw;
-  height: 100vh;
+  position: relative;
+  left: 285px;
+  min-width: 1200px;
   padding: 20px;
 
-  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.upload-img {
+  transform: translate(-15%, 0);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  row-gap: 50px;
+}
+
+.picture {
+  background-color: #f0f0f0;
+
+  padding: 10px;
 
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
-.content {
-  margin: 10px 30px;
-}
-
-.upload {
-  width: 400px;
-  height: 275px;
-  /* margin: 20px; */
-  background-color: #f0f0f0;
-  /* padding: 20px; */
-  border-radius: 11px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
-
-.upload input {
-  margin: auto 50%;
-}
-
-.upload-column button {
-  background-color: #8525ff;
-  border-radius: 5%;
-  border: none;
-  justify-content: center;
-}
-
-.upload-column h2 {
-  color: #9e9999;
+.upload:hover,
+.upload:active {
+  background-color: #fff;
 }
 
 .add {
-  position: absolute;
-  bottom: 18%;
-  left: 78%;
+  position: fixed;
+  bottom: 10%;
+  left: 95%;
   transform: translateX(-50%);
   padding: 1px 4px;
   background-color: #8525ff;

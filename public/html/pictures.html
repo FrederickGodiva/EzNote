@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <nav class="p-3" style="width: 280px; height: 100vh">
+    <nav class="p-3">
       <div class="header">
         <a
           href="./home.html"
@@ -40,8 +40,12 @@
           <a href="./pictures.html" class="nav-link nav-option"> Pictures </a>
         </li>
         <li class="nav-item">
-          <img src="../assets/icon/settings.png" alt="Settings" width="25" />
-          <a href="#" class="nav-link nav-option"> Settings </a>
+          <img src="../assets/icon/settings.png" alt="Account" width="25" />
+          <a href="./account.html" class="nav-link nav-option"> Account </a>
+        </li>
+        <li class="nav-item">
+          <img src="../assets/icon/file.png" alt="About Us" width="25" />
+          <a href="./about-us.html" class="nav-link nav-option"> About Us </a>
         </li>
       </ul>
     </nav>
@@ -51,43 +55,18 @@
         <div class="date"></div>
         <div class="clock"></div>
       </div>
-
-      <div class="profile">
-        <img
-          src="../assets/icon/notif.png"
-          alt="Notifications"
-          width="30"
-          height="30" />
-        <div class="dropdown">
-          <button
-            class="dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"></button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Logout</a></li>
-          </ul>
-        </div>
-        <img
-          src="../assets/icon/account.webp"
-          alt="Profile Picture"
-          width="35"
-          height="35" />
-      </div>
     </header>
 
     <main>
-      <div class="content">
-        <h1>Your Picture</h1>
-        <div class="upload">
-          <input type="file" id="photoInputLeft" accept="image/*" />
-          <br />
-          <button type="submit" class="submit">Upload</button>
-        </div>
+      <form
+        action=""
+        method="POST"
+        enctype="multipart/form-data"
+        class="upload-img"></form>
 
-        <button class="add">
-          <img src="../assets/icon/add.png" alt="" width="15" height="15" />
-        </button>
-      </div>
+      <button class="add">
+        <img src="../assets/icon/add.png" alt="" width="15" height="15" />
+      </button>
     </main>
 
     <script
@@ -95,5 +74,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
     <script src="../js/time.js"></script>
+    <script src="../js/pictures.js"></script>
   </body>
 </html>

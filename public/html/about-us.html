@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <nav class="p-3" style="width: 280px; height: 100vh">
+    <nav class="p-3">
       <div class="header">
         <a
           href="./home.html"
@@ -40,8 +40,12 @@
           <a href="./pictures.html" class="nav-link nav-option"> Pictures </a>
         </li>
         <li class="nav-item">
-          <img src="../assets/icon/settings.png" alt="Settings" width="25" />
-          <a href="#" class="nav-link nav-option"> Settings </a>
+          <img src="../assets/icon/settings.png" alt="Account" width="25" />
+          <a href="./account.html" class="nav-link nav-option"> Account </a>
+        </li>
+        <li class="nav-item">
+          <img src="../assets/icon/file.png" alt="About Us" width="25" />
+          <a href="./about-us.html" class="nav-link nav-option"> About Us </a>
         </li>
       </ul>
     </nav>
@@ -51,36 +55,13 @@
         <div class="date"></div>
         <div class="clock"></div>
       </div>
-
-      <div class="profile">
-        <img
-          src="../assets/icon/notif.png"
-          alt="Notifications"
-          width="30"
-          height="30" />
-        <div class="dropdown">
-          <button
-            class="dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"></button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Logout</a></li>
-          </ul>
-        </div>
-        <img
-          src="../assets/icon/account.webp"
-          alt="Profile Picture"
-          width="35"
-          height="35" />
-      </div>
     </header>
 
     <main>
-      <!-- Profile Anggota -->
-      <div class="row" id="foto">
+      <div class="picture">
         <div class="col-2 col-md-2">
           <img
-            src="azi.png"
+            src="../assets/img/margareth.png"
             alt="Image 1"
             class="img-fluid w-100 rounded-circle" />
           <div class="figure-caption text-center text-black fw-bold">
@@ -89,7 +70,7 @@
         </div>
         <div class="col-2 col-md-2">
           <img
-            src="azi.png"
+            src="../assets/img/azi.png"
             alt="Image 2"
             class="img-fluid w-100 rounded-circle" />
           <div class="figure-caption text-center text-black fw-bold">Azi</div>
@@ -114,21 +95,25 @@
         </div>
       </div>
 
-      <!-- keterangan -->
-      <div class="Teks-bawah">
-        <h1>KELOMPOK ____</h1>
-        <p class="paragraph">Anggota:</p>
-        <p class="paragraph">1. Margareth Serepine Simanjuntak (221401022)</p>
-        <p class="paragraph">2. Muhammad Azi Maulana Manru (221401028)</p>
-        <p class="paragraph">3. Frederick Godiva (221401038)</p>
-        <p class="paragraph">4. Wilbert Nailson Sachio (221401048)</p>
+      <div class="about-us-text">
+        <div>
+          <h1 class="text-center">KELOMPOK EUNOIA</h1>
+          <p>Anggota:</p>
+          <p>1. Margareth Serepine Simanjuntak (221401022)</p>
+          <p>2. Muhammad Azi Maulana Manru (221401028)</p>
+          <p>3. Frederick Godiva (221401038)</p>
+          <p>4. Wilbert Nailson Sachio (221401048)</p>
+        </div>
 
-        <h4 class="paragraph">Keterangan:</h4>
-        <p class="paragraph">
-          Ini adalah tugas akhir ujian laboratorium pemrograman web dan basis
-          data. Dalam project ini kami membuat website catatan sederhana yang
-          juga menggunakan CRUD dalam pengaplikasiannya
-        </p>
+        <div>
+          <h3 class="text-center">Keterangan:</h3>
+          <p>
+            Ini adalah tugas akhir ujian laboratorium pemrograman web dan basis
+            data. <br />
+            Dalam project ini kami membuat website catatan sederhana yang juga
+            menggunakan CRUD dalam pengaplikasiannya
+          </p>
+        </div>
       </div>
     </main>
 

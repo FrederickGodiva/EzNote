@@ -10,7 +10,8 @@ body {
 
 nav {
   position: fixed;
-  width: 349px;
+  width: 280px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -55,10 +56,10 @@ nav {
 
 header {
   position: fixed;
-  width: 100vw;
+  width: 1600px;
   padding: 10px;
-  height: 9vh;
-  left: 15%;
+  height: 85px;
+  left: 280px;
   box-shadow: 10px 1px 11px rgba(0, 0, 0, 0.2);
 
   display: flex;
@@ -69,8 +70,8 @@ header {
 
 main {
   position: fixed;
-  top: 9vh;
-  left: 15%;
+  top: 85px;
+  left: 285px;
 
   width: 100vw;
   height: 100vh;
@@ -83,17 +84,6 @@ main {
   justify-content: flex-start;
   align-items: center;
   gap: 50px;
-}
-
-.profile {
-  margin-left: 70vw;
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-}
-
-.dropdown-toggle {
-  background-color: #8525ff;
 }
 
 .information {

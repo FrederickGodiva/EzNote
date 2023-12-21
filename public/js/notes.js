@@ -13,13 +13,13 @@ addBtn.addEventListener("click", () => {
   noteFocus(newNote);
 });
 
-function noteFocus(note) {
-  const inputFields = note.getElementsByTagName("textarea");
+function noteFocus(el) {
+  const inputFields = el.getElementsByTagName("textarea");
   let actionBtn;
 
   const removeActionBtn = () => {
     if (actionBtn) {
-      note.removeChild(actionBtn);
+      el.removeChild(actionBtn);
       actionBtn = null;
     }
   };
@@ -32,7 +32,7 @@ function noteFocus(note) {
         actionBtn.innerHTML = `
           <button class="btn btn-success save">Save</button>
           <button class="btn btn-danger delete">Delete</button>`;
-        note.appendChild(actionBtn);
+        el.appendChild(actionBtn);
       }
     });
 

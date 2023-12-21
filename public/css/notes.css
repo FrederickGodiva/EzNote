@@ -5,11 +5,13 @@ body {
   padding: 0;
   font-family: "Signika", sans-serif;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 nav {
   position: fixed;
-  width: 349px;
+  width: 280px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -53,11 +55,11 @@ nav {
 }
 
 header {
-  position: fixed;
+  position: relative;
   width: 100vw;
+  height: 85px;
   padding: 10px;
-  height: 9vh;
-  left: 15%;
+  left: 280px;
   box-shadow: 10px 1px 11px rgba(0, 0, 0, 0.2);
 
   display: flex;
@@ -76,18 +78,14 @@ header {
 }
 
 main {
-  position: fixed;
-  top: 9vh;
-  left: 15%;
+  position: relative;
+  left: 285px;
 
-  width: 100vw;
-  height: 100vh;
+  min-width: 1200px;
+
   padding: 20px;
 
-  background-color: #ddd;
-
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
@@ -98,9 +96,15 @@ main {
   position: relative;
   left: 7%;
 
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 20px; */
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  column-gap: 30px;
+  row-gap: 40px;
 }
 
 .note {
@@ -110,7 +114,7 @@ main {
   width: auto;
   height: auto;
   margin-top: 30px;
-  transform: translate(-15%, 0);
+  transform: translate(-10%, 0);
 
   border: 1px solid #ccc;
   border-radius: 11px;
@@ -134,10 +138,10 @@ h2 {
 }
 
 .add {
-  position: absolute;
-  bottom: 18%; /* Mengatur jarak dari bawah */
-  left: 78%; /* Pusatkan tombol secara horizontal */
-  transform: translateX(-50%); /* Pusatkan tombol secara horizontal */
+  position: fixed;
+  bottom: 10%;
+  left: 95%;
+  transform: translateX(-50%);
   padding: 1px 4px;
   background-color: #8525ff;
   color: white;

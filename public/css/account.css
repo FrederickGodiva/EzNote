@@ -5,12 +5,12 @@ body {
   padding: 0;
   font-family: "Signika", sans-serif;
   background-color: #fff;
-  overflow: hidden;
 }
 
 nav {
   position: fixed;
-  width: 349px;
+  width: 280px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -54,32 +54,21 @@ nav {
 }
 
 header {
-  position: fixed;
+  position: relative;
   width: 100vw;
+  height: 85px;
   padding: 10px;
-  height: 9vh;
-  left: 15%;
+  left: 280px;
   box-shadow: 10px 1px 11px rgba(0, 0, 0, 0.2);
 
   display: flex;
   align-items: center;
 }
 
-.profile {
-  margin-left: 70vw;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.dropdown-toggle {
-  background-color: #8525ff;
-}
-
 main {
   position: fixed;
-  top: 9vh;
-  left: 15%;
+  top: 85px;
+  left: 285px;
 
   width: 100vw;
   height: 100vh;
@@ -89,48 +78,47 @@ main {
 
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: baseline;
+  gap: 50px;
 }
 
-/* .account-settings {
-  display: flex;
-  justify-content: start;
-  padding: 10px;
-  transform: translate(-10%, 0);
-  gap: 10px;
-} */
-
-.info-column {
-  width: 100%;
+.picture {
+  background-color: #ddd;
 }
 
-.photo-column {
-  justify-content: center;
-}
-
-.photo-column,
-.info-column {
-  width: 20%;
+.profile-picture,
+.account {
   background-color: #fff;
-  padding: 10px;
-  height: 95%;
-  border-radius: 5px;
+  border-radius: 11px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.info-column {
-  order: 50px; /* Menggeser kolom informasi ke posisi kedua (kanan) */
+.profile-picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+  padding: 10px;
 }
 
-h4 {
-  color: #9e9999;
+.account {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
 }
 
 input {
-  border: none;
+  border: 1px solid #aaa;
+  border-radius: 11px;
+  padding: 10px;
 }
+
 button {
-  margin: 10px 0;
   background-color: #8525ff;
-  border-radius: 5px;
+  color: #fff;
+  width: 500px;
+  padding: 10px 0;
+  margin-top: 10px;
+  border-radius: 11px;
 }
