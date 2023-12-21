@@ -1,3 +1,23 @@
+<?php 
+  require "../php/functions.php";
+
+  if(isset($_POST["sign-up"])) {
+    if(signUp($_POST) > 0) {
+      echo "
+        <script>
+          alert('New User Added!');
+        </script>
+      ";
+      header("Location: ./login.php");
+    } else {
+      echo pg_last_error($db);
+    }
+  }
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -58,7 +78,7 @@
               Sign Up
             </button>
             <span class="login"
-              ><a href="./login.html">Already have an account?</a></span
+              ><a href="./login.php">Already have an account?</a></span
             >
           </form>
         </div>

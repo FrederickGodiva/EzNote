@@ -1,3 +1,15 @@
+<?php 
+  session_start();
+
+  if(!isset($_SESSION["login"])) {
+    header("Location: ./login.php");
+    exit;
+  }
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +29,7 @@
     <nav class="p-3">
       <div class="header">
         <a
-          href="./home.html"
+          href="./home.php"
           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
           <img src="../assets/img/logo.png" alt="logo" width="50" />
           <h1 class="header-text">EzNote</h1>
@@ -27,28 +39,28 @@
       <ul class="nav nav-pills flex-column mb-auto sidebar">
         <li class="nav-item">
           <img src="../assets/icon/home.png" alt="Home" width="25" />
-          <a href="./home.html" class="nav-link nav-option" aria-current="page">
+          <a href="./home.php" class="nav-link nav-option" aria-current="page">
             Home
           </a>
         </li>
         <li class="nav-item">
           <img src="../assets/icon/notes.png" alt="Notes" width="25" />
-          <a href="./notes.html" class="nav-link nav-option"> Notes </a>
+          <a href="./notes.php" class="nav-link nav-option"> Notes </a>
         </li>
         <li class="nav-item">
           <img src="../assets/icon/picture.png" alt="Picture" width="25" />
-          <a href="./pictures.html" class="nav-link nav-option"> Pictures </a>
+          <a href="./pictures.php" class="nav-link nav-option"> Pictures </a>
         </li>
         <li class="nav-item">
           <img src="../assets/icon/settings.png" alt="Account" width="25" />
-          <a href="./account.html" class="nav-link nav-option"> Account </a>
+          <a href="./account.php" class="nav-link nav-option"> Account </a>
         </li>
         <li class="nav-item">
           <img src="../assets/icon/file.png" alt="About Us" width="25" />
-          <a href="./about-us.html" class="nav-link nav-option"> About Us </a>
+          <a href="./about-us.php" class="nav-link nav-option"> About Us </a>
         </li>
       </ul>
-      <a href="../php/logout.php" class="btn btn-danger justify-content-center"
+      <a href="./logout.php" class="btn btn-danger justify-content-center"
         >Log Out</a
       >
     </nav>

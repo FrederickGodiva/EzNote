@@ -1,3 +1,37 @@
+<?php 
+  session_start();
+
+  require "../php/functions.php";
+
+  if(isset($_SESSION["login"])) {
+    header("Location: ./home.php");
+    exit;
+  }
+
+  if(isset($_POST["login"])) {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    $query = "SELECT * FROM users WHERE username='$username'";
+    $result = pg_query($db, $query);
+
+    if(pg_num_rows($result) === 1) {
+      $row = pg_fetch_assoc($result);
+
+      if(password_verify($password, $row["password"])) {
+        $_SESSION["login"] = true;
+        $_SESSION["id_user"] = $row["id_user"];
+        
+        header("Location: ./home.php");
+        exit;
+      }
+    }
+  }
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -46,7 +80,7 @@
               Login
             </button>
             <span class="sign-up"
-              ><a href="./signup.html">Don't have an account?</a></span
+              ><a href="./signup.php">Don't have an account?</a></span
             >
           </form>
         </div>
