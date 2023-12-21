@@ -115,6 +115,10 @@ main {
   background-color: #fff;
 }
 
+.preview {
+  height: 200px;
+}
+
 .add {
   position: fixed;
   bottom: 10%;

@@ -25,32 +25,15 @@
           <h1 class="header-title">EzNote</h1>
         </div>
 
-        <h2 class="login-heading">Log in to Your account</h2>
-
-        <p class="text-center text-secondary select-method">
-          select log in method:
-        </p>
-
+        <h2 class="login-heading">Login to Your account</h2>
         <div class="login-method">
-          <button type="submit" class="google-verification-btn">
-            <img
-              src="../assets/icon/google.webp"
-              alt="Google Icon"
-              width="30"
-              height="30"
-              class="align-content-md-center" />
-            Google
-          </button>
-
-          <span class="text-center text-secondary"> or </span>
-
           <form action="" method="POST" class="login-form">
             <input
-              type="email"
-              class="form-control email-input"
-              id="email"
-              name="email"
-              placeholder="Email" />
+              type="text"
+              class="form-control username-input"
+              id="username"
+              name="username"
+              placeholder="Username" />
 
             <input
               type="password"
@@ -59,7 +42,9 @@
               name="password"
               placeholder="Password" />
 
-            <button type="submit" class="login-button">Login</button>
+            <button type="submit" name="login" class="login-button">
+              Login
+            </button>
             <span class="sign-up"
               ><a href="./signup.html">Don't have an account?</a></span
             >
