@@ -55,7 +55,7 @@ nav {
 
 header {
   position: fixed;
-  width: 1600px;
+  width: 100vw;
   height: 85px;
   padding: 10px;
   left: 280px;

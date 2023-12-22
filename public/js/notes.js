@@ -5,8 +5,8 @@ addBtn.addEventListener("click", () => {
   const newNote = document.createElement("div");
   newNote.classList.add("note");
   newNote.innerHTML = `
-    <textarea placeholder="Title" class="title-area"></textarea>
-    <textarea placeholder="Start writing" class="note-area"></textarea>
+    <textarea name="title" placeholder="Title" class="title-area"></textarea>
+    <textarea name="note" placeholder="Start writing" class="note-area"></textarea>
   `;
   notes.appendChild(newNote);
 
@@ -30,8 +30,8 @@ function noteFocus(el) {
         actionBtn = document.createElement("div");
         actionBtn.classList.add("d-flex", "justify-content-end", "gap-3");
         actionBtn.innerHTML = `
-          <button class="btn btn-success save">Save</button>
-          <button class="btn btn-danger delete">Delete</button>`;
+          <button name="save" class="btn btn-success save">Save</button>
+          <button name="delete" class="btn btn-danger delete">Delete</button>`;
         el.appendChild(actionBtn);
       }
     });

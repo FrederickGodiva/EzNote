@@ -82,7 +82,7 @@
 
     <main>
       <div class="information">
-        <img src="../assets/img/azi.png" alt="Profile Picture" width="150" />
+        <img src="../assets/img/logo.png" alt="Profile Picture" width="150" />
 
         <div class="vertical-line"></div>
 

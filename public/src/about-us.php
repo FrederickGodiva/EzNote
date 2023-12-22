@@ -92,7 +92,7 @@
         </div>
         <div class="col-2 col-md-2">
           <img
-            src="azi.png"
+            src="../assets/img/frederick.png"
             alt="Image 3"
             class="img-fluid w-100 rounded-circle" />
           <div class="figure-caption text-center text-black fw-bold">

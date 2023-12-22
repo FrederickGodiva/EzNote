@@ -94,17 +94,8 @@
       </div>
     </header>
 
-    <main>
-      <div class="profile-picture">
-        <h4>Profile Picture</h4>
-        <img
-          class="align-center"
-          src="../assets/img/azi.png"
-          alt="Profile Picture"
-          width="150" />
-      </div>
-
-      <form method="POST" class="account">
+    <main class="d-flex justify-content-center py-5" ">
+      <form method="POST" class="account" style="transform: translate(-5%, 0);">
         <input type="hidden" name="usernameLama" value="<?= $row['username']?>">
         <h4>Account Information</h4>
 
@@ -114,7 +105,7 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="new-password" required />
 
-        <button type="submit" name="reset">Reset Password</button>
+        <button type="submit" name="reset">Reset Account</button>
       </form>
     </main>
 
