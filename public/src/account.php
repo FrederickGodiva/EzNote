@@ -91,12 +91,10 @@
 
     <main class="d-flex justify-content-center py-5" ">
       <form method="POST" class="account" style="transform: translate(-5%, 0);">
-        <input type="hidden" name="usernameLama" value="<?= $row['username']?>">
         <h4>Account Information</h4>
 
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="<?= $row['username'];?>" />
-        <input type="hidden" id="usernameLama" name="usernameLama" placeholder="<?= $row['username'];?>" />
+        <input type="text" id="username" name="username" placeholder="<?= $row['username'];?>" required/>
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="new-password" required />

@@ -118,11 +118,6 @@ main {
   font-weight: 800;
 }
 
-.welcome-txt p {
-  text-align: start;
-  transform: translate(5%, 0);
-}
-
 .tambah {
   position: absolute;
   bottom: 10%;

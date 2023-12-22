@@ -102,12 +102,12 @@
           Buatlah catatan anda lebih mudah menggunakan EzNote. Rasakan beberapa
           fitur yang kami sediakan
         </p>
-        <p class="paragraph">1. Mencatat seperti biasa</p>
-        <p class="paragraph">2. Dapat membuat file</p>
-        <p class="paragraph">3. Dapat mengupload gambar dengan mudah</p>
-        <p class="paragraph">
-          4. Interface yang simple dan penggunaan web yang mudah
-        </p>
+
+        <ol class="d-flex flex-column align-items-start gap-3">
+          <li>Mencatat seperti biasa</li>
+          <li>Dapat mengupload gambar dengan mudah</li>
+          <li>Interface yang simple dan penggunaan web yang mudah</li>
+        </ol>
       </div>
     </main>
 

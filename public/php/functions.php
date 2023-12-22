@@ -169,8 +169,7 @@
 
         $id_user = $_SESSION['id_user'];
 
-        // $username = $data["username"];
-        $username = isset($_POST["username"]) ? $_POST["username"] : $data['usernameLama'];
+        $username = $data["username"];
         $password = $data["new-password"];
 
 

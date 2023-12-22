@@ -3,11 +3,6 @@
 
   if(isset($_POST["sign-up"])) {
     if(signUp($_POST) > 0) {
-      echo "
-        <script>
-          alert('New User Added!');
-        </script>
-      ";
       header("Location: login.php");
     } else {
       echo pg_last_error($db);
