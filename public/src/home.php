@@ -4,7 +4,7 @@
   require "../php/functions.php";
 
   if(!isset($_SESSION["login"])) {
-    header("Location: ./login.php");
+    header("Location: ../../index.html");
   }
 
   $query = "SELECT count(note) FROM notes WHERE id_user={$_SESSION['id_user']};";

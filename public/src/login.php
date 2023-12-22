@@ -4,7 +4,7 @@
   require "../php/functions.php";
 
   if(isset($_SESSION["login"])) {
-    header("Location: ./home.php");
+    header("Location: ../../index.html");
     exit;
   }
 

@@ -73,29 +73,31 @@ header {
   gap: 12px;
 }
 
-.dropdown-toggle {
-  background-color: #8525ff;
-}
-
 main {
   position: relative;
   left: 285px;
+
   min-width: 1200px;
+
   padding: 20px;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
-.upload-img {
-  transform: translate(-15%, 0);
-
+.pictures {
+  transform: translate(35%, 0);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
   row-gap: 50px;
+  -webkit-transform: translate(35%, 0);
+  -moz-transform: translate(35%, 0);
+  -ms-transform: translate(35%, 0);
+  -o-transform: translate(35%, 0);
 }
 
 .picture {

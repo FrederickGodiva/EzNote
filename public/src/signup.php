@@ -8,7 +8,7 @@
           alert('New User Added!');
         </script>
       ";
-      header("Location: ./login.php");
+      header("Location: login.php");
     } else {
       echo pg_last_error($db);
     }

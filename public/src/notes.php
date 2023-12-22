@@ -1,12 +1,19 @@
 <?php 
   session_start();
-  
+
   require "../php/functions.php";
 
   if(!isset($_SESSION["login"])) {
-    header("Location: ./login.php");
+    header("Location: ../../index.html");
     exit;
   }
+
+  $id_user = $_SESSION["id_user"];
+
+  $query = "
+    SELECT * FROM notes WHERE id_user='$id_user';
+  ";
+  $result = pg_query($db, $query);
 ?>
 
 
@@ -75,12 +82,18 @@
     </header>
 
     <main>
-      <form action="" method="POST" class="add-note" id="noteForm">
-        <div class="notes"></div>
-      </form>
-      <button class="add">
-        <img src="../assets/icon/add.png" alt="" width="15" height="15" />
-      </button>
+      <div class="notes">
+        <?php while($note = pg_fetch_assoc($result)) : ?>
+          <div class="note">
+            <textarea placeholder="<?= $note['note_title']; ?>" class="title-area"></textarea>
+            <textarea placeholder="<?= $note['note']; ?>" class="note-area"></textarea>
+            <a href="../php/edit-note.php?id_note=<?= $note['id_note']; ?>" name="edit" class="btn btn-warning">Edit</a>
+          </div>
+        <?php endwhile; ?>
+        <a href="../php/add-note.php" class="btn add">
+          <img src="../assets/icon/add.png" alt="" width="15" height="15" />
+        </a>
+      </div>
     </main>
 
     <script
@@ -88,6 +101,5 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
     <script src="../js/time.js"></script>
-    <script src="../js/notes.js"></script>
   </body>
 </html>

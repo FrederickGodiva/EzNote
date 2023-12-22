@@ -2,7 +2,7 @@
   session_start();
 
   if(!isset($_SESSION["login"])) {
-    header("Location: ./login.php");
+    header("Location: ../../index.html");
     exit;
   }
 ?>
@@ -101,7 +101,7 @@
         </div>
         <div class="col-2 col-md-2">
           <img
-            src="azi.png"
+            src="../assets/img/wilbert.png"
             alt="Image 4"
             class="img-fluid w-100 rounded-circle" />
           <div class="figure-caption text-center text-black fw-bold">

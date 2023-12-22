@@ -4,7 +4,7 @@
   require "../php/functions.php";
 
   if(!isset($_SESSION["login"])) {
-    header("Location: ./login.php");
+    header("Location: ../../index.html");
     exit;
   }
 
@@ -14,11 +14,6 @@
   $row = pg_fetch_assoc($result);
 
   if(isset($_POST["reset"])) {
-    echo "
-        <script>
-            alert('CLICKED!');
-        </script>
-    ";
     if(!(resetPassword($_POST) > 0)) {
       echo "
           <script>
@@ -100,7 +95,8 @@
         <h4>Account Information</h4>
 
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="<?= $row['username'];?>" required />
+        <input type="text" id="username" name="username" placeholder="<?= $row['username'];?>" />
+        <input type="hidden" id="usernameLama" name="usernameLama" placeholder="<?= $row['username'];?>" />
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="new-password" required />

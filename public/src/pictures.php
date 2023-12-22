@@ -4,10 +4,18 @@
   require "../php/functions.php";
 
   if(!isset($_SESSION["login"])) {
-    header("Location: ./login.php");
+    header("Location: ../../index.html");
     exit;
   }
+
+  $id_user = $_SESSION["id_user"];
+
+  $query = "
+    SELECT * FROM pictures WHERE id_user='$id_user';
+  ";
+  $result = pg_query($db, $query);
 ?>
+
 
 
 
@@ -75,15 +83,18 @@
     </header>
 
     <main>
-      <form
-        action=""
-        method="POST"
-        enctype="multipart/form-data"
-        class="upload-img"></form>
+      <div class="pictures">
+        <?php while($picture = pg_fetch_assoc($result)) : ?>
+          <div class="picture">
+            <img src="../../images/<?= $picture['picture']; ?>" width="275">
+            <a href="../php/delete-picture.php?id_picture=<?= $picture['id_picture']; ?>" name="edit" class="btn btn-danger">Delete</a>
+          </div>
+          <?php endwhile; ?>
+      </div>
 
-      <button class="add">
-        <img src="../assets/icon/add.png" alt="" width="15" height="15" />
-      </button>
+      <a href="../php/add-picture.php" class="add">
+        <img src="../assets/icon/add.png" width="15" height="15" />
+      </a>
     </main>
 
     <script
@@ -91,6 +102,5 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
     <script src="../js/time.js"></script>
-    <script src="../js/pictures.js"></script>
   </body>
 </html>
