@@ -8,8 +8,12 @@ const updateTime = () => {
   const minute = currentTime.getMinutes();
   const second = currentTime.getSeconds();
 
-  const formatDate = `${date} / ${month} / ${year}`;
-  const formatTime = `${hour} : ${minute} : ${second}`;
+  const formatDate = `${date < 10 ? "0" : ""}${date}.${
+    month < 10 ? "0" : ""
+  }${month}.${year % 100 < 10 ? "0" : ""}${year % 100}`;
+  const formatTime = `${hour < 10 ? "0" : ""}${hour} : ${
+    minute < 10 ? "0" : ""
+  }${minute} : ${second < 10 ? "0" : ""}${second}`;
 
   document.querySelector(".date").innerHTML = "Date: " + formatDate;
   document.querySelector(".clock").innerHTML = "Time: " + formatTime;
